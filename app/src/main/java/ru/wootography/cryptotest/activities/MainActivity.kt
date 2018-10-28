@@ -25,7 +25,7 @@ import ru.wootography.cryptotest.utils.Injector
 
 class MainActivity : BaseActivity(), MainView, NavigationView.OnNavigationItemSelectedListener {
 
-    lateinit var stockAdapter : StockAdapter
+    lateinit var stockAdapter: StockAdapter
 
     companion object {
         private val LAYOUT = R.layout.activity_main
@@ -45,33 +45,26 @@ class MainActivity : BaseActivity(), MainView, NavigationView.OnNavigationItemSe
         super.onCreate(savedInstanceState)
         setContentView(LAYOUT)
         setSupportActionBar(toolbar)
-
         setupUI()
         setupUX()
     }
 
     override fun setStockList(stockList: StockItems) {
-       stockAdapter = StockAdapter(stockList)
-       rv_stock_list.adapter = stockAdapter
-
+        stockAdapter = StockAdapter(stockList)
+        rv_stock_list.adapter = stockAdapter
     }
 
 
     override fun setupUI() {
         rv_stock_list.layoutManager = LinearLayoutManager(this)
-
-
-
     }
 
     override fun setupUX() {
-
         val toggle = ActionBarDrawerToggle(
-        this, drawer_layout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close)
+                this, drawer_layout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close)
         drawer_layout.addDrawerListener(toggle)
         toggle.syncState()
         nav_view.setNavigationItemSelectedListener(this)
-
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
@@ -97,10 +90,9 @@ class MainActivity : BaseActivity(), MainView, NavigationView.OnNavigationItemSe
         when (item.itemId) {
             R.id.action_settings -> {
                 mainPresenter.getStocksItems()
-                return true}
+                return true
+            }
             else -> return super.onOptionsItemSelected(item)
         }
     }
-
-
 }

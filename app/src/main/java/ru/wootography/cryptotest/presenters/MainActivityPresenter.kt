@@ -1,6 +1,7 @@
 package ru.wootography.cryptotest.presenters
 
 import com.arellomobile.mvp.InjectViewState
+import ru.wootography.cryptotest.Const
 import ru.wootography.cryptotest.api.ApiResponse
 import ru.wootography.cryptotest.api.RestApi
 import ru.wootography.cryptotest.interfaces.views.MainView
@@ -21,7 +22,7 @@ internal constructor(private val restApi: RestApi) : BasePresenter<MainView>() {
 
      fun getStocksItems() {
         val request = restApi.istock.getAll()
-                .repeatWhen { objectObservable -> objectObservable.delay(15, TimeUnit.SECONDS)  }
+                .repeatWhen { objectObservable -> objectObservable.delay(Const.Url.DELAY, TimeUnit.SECONDS)  }
                 .compose(RxUtils.httpSchedulers())
                 .subscribe(
                         { response -> successGetList(response) },

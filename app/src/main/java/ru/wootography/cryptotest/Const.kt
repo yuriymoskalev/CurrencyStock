@@ -7,5 +7,6 @@ class Const {
     object Url {
         val API_TEST = "http://phisix-api3.appspot.com"
         val AUTHORIZATION = "Authorization"
+        val DELAY: Long = 15
     }
 }

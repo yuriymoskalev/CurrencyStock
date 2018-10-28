@@ -30,10 +30,9 @@ class StockAdapter (private val stocks: StockItems) : RecyclerView.Adapter<Stock
     }
 
     class StockVH(itemView: View): RecyclerView.ViewHolder(itemView) {
-        private val stockName by lazy {itemView!!.findViewById<TextView>(R.id.tv_stock_name)}
-        private val stockVolume by lazy {itemView!!.findViewById<TextView>(R.id.tv_stock_volume)}
-        private val stockAmount by lazy {itemView!!.findViewById<TextView>(R.id.tv_stock_amount)}
-
+        private val stockName by lazy {itemView.findViewById<TextView>(R.id.tv_stock_name)}
+        private val stockVolume by lazy {itemView.findViewById<TextView>(R.id.tv_stock_volume)}
+        private val stockAmount by lazy {itemView.findViewById<TextView>(R.id.tv_stock_amount)}
 
         fun bind(stock: StockItem){
             stockName.text = stock.name
@@ -44,8 +43,6 @@ class StockAdapter (private val stocks: StockItems) : RecyclerView.Adapter<Stock
 
             bigDecAmount.setScale(2, ROUND_HALF_UP)
             stockAmount.text = df.format(bigDecAmount)
-
-
         }
 
     }
