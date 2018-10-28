@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Android Stocks</string>
+    <string name="repeat_request">Повторить запрос</string>
+    <string name="something_went_wrong">Что-то пошло не так :\'(</string>
+    <string name="nav_header_desc">user description</string>
+    <string name="nav_header_title">Yuriy Moskalev</string>
+    <string name="nav_header_subtitle">y.moskalev@gmail.com</string>
+    <string name="action_settings">Refresh</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="volume">Volume</string>
+    <string name="currency">Currency</string>
+    <string name="amount">Amount</string>
+
+</resources>

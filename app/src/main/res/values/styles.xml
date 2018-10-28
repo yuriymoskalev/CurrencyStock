@@ -1,0 +1,45 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+
+    <style name="SplashScreen" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:windowBackground">@drawable/background_splash</item>
+        <item name="colorAccent">@color/light_background</item>
+    </style>
+
+
+
+
+    <style name="BaseTextList">
+        <item name="android:paddingTop">@dimen/padding_big</item>
+        <item name="android:paddingBottom">@dimen/padding_big</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:paddingLeft">@dimen/margin_middle</item>
+
+    </style>
+    <style name="BaseSymbolList" parent="BaseTextList">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="Drawer.Custom.Dark" parent="@style/ThemeOverlay.AppCompat.Light">
+        <item name="colorControlHighlight">#26000000</item>
+        <item name="listPreferredItemHeightSmall">60dp</item>
+    </style>
+
+
+
+</resources>
